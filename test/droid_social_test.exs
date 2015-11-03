@@ -17,8 +17,4 @@ defmodule DroidSocialTest do
     assert DroidSocial.post("Hiyas") == "boop: Hiyas"
   end
 
-  test "raw protocol" do
-    assert DroidSocial.post("Hiyas") == "boop: Hiyas"
-  end
-  
 end
