@@ -2,9 +2,16 @@ defmodule DroidSocialTest do
   use ExUnit.Case
   doctest DroidSocial
 
-
-  test "you would put someting here" do
-    assert 1 == 1
+ 
+  #mix test --only normal
+  @tag :normal
+  test "run with our mock in test" do
+    assert DroidSocial.post("whatevs") == "boop: whatevs"
   end
 
+ #mix test --only fb
+  @tag :fb
+  test "run against the FB" do
+    assert DroidSocial.post(:fb, "bleep")
+  end
 end
